@@ -121,6 +121,12 @@ i {
 .form__right input:focus {
     outline: 1px solid var(--secondary-color);
 }
+.form__right .form__control {
+    margin-bottom: 2rem;
+}
+.form__right .form__control .form__textarea {
+    margin-bottom: 0;
+}
 
 .form__right label {
     display: block;
@@ -158,6 +164,17 @@ i {
     text-align: center;
 }
 
+/* media queries */
+@media(max-width: 1200px){
+    .form__left .form__left-img {
+        padding: 2rem 3rem;
+    }
+    .form__right .form__textarea {
+        overflow: hidden;
+    }
+}
+
+
 @media(max-width: 800px){
     .flex-column-reverse {
         flex-direction: column-reverse;
@@ -169,12 +186,17 @@ i {
         padding: 2rem;
     }
     .form__right {
-        padding: 2rem 1rem;
+        padding: 2rem 3rem;
     }
     .form__right .form__textarea {
        overflow: hidden;
     }
     .flex-gap-1 {
         column-gap: 1rem;
+    }
+}
+@media(max-width:550px){
+    .form__right {
+        padding: 2rem 1rem;
     }
 }
